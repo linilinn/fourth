@@ -14,7 +14,12 @@ import androidx.fragment.app.FragmentManager;
 
 import com.example.fourth.MainActivity;
 import com.example.fourth.R;
+import com.example.fourth.adapter.Drink;
+import com.example.fourth.adapter.DrinkAdapter;
 import com.example.fourth.databinding.FragmentFirstBinding;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class FirstFragment extends Fragment {
     FragmentManager fragmentManager;
@@ -48,4 +53,5 @@ public class FirstFragment extends Fragment {
         binding.button.setOnClickListener(view -> mainActivity.changeFragment(view));
         binding.button2.setOnClickListener(view -> mainActivity.changeFragment(view));
     }
+
 }
