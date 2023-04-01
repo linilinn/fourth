@@ -76,6 +76,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/space_grotesk_light"
         android:text="Какое блюдо заказал гость?"
+        android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"

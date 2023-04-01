@@ -7,9 +7,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.fourth.MainActivity;
 import com.example.fourth.R;
@@ -53,5 +55,9 @@ public class SecondFragment extends Fragment {
         }
         DrinkAdapter drinkAdapter = new DrinkAdapter(mainActivity, drinks);
         binding.listView.setAdapter(drinkAdapter);
+        binding.listView.setOnItemClickListener((adapterView, view, i, l) -> {
+            Log.i("ListView", "ListView is clicked");
+            Toast.makeText(mainActivity, "ListView is clicked", Toast.LENGTH_LONG).show();
+        });
     }
 }

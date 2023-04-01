@@ -1,10 +1,15 @@
 package com.example.fourth.adapter;
 
+import static android.app.PendingIntent.getActivity;
+
+import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,6 +20,7 @@ import java.util.List;
 
 public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
     private List<Food> foodList;
+
 
     public FoodAdapter(List<Food> bookList) {
         this.foodList = bookList;
@@ -42,6 +48,10 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
         Food food = foodList.get(position);
         holder.textView.setText(food.getFood());
         holder.imageView.setImageResource(food.getImageResource());
+        holder.itemView.setOnClickListener(view -> {
+            Log.i("RecyclerView", "RecyclerView is clicked");
+            Toast.makeText(view.getContext(), "RecyclerView is clicked", Toast.LENGTH_LONG).show();
+        });
     }
 
     @Override
