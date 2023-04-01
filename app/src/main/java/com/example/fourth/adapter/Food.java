@@ -2,6 +2,7 @@ package com.example.fourth.adapter;
 
 public class Food {
     private String food;
+    private int imageResource;
 
     public Food() {
         this("Food");
@@ -13,5 +14,9 @@ public class Food {
 
     public String getFood() {
         return food;
+    }
+
+    public int getImageResource() {
+        return imageResource;
     }
 }
